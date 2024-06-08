@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+:root {
+  --primary-color: #03045E;
+  --secondary-color: #00B4D8;
+  --tertiary-color: #90E0EF;
+  --text-dark: #ffff;
+  --text-light: #CAF0F8;
+  --white: #ffffff;
+  --max-width: 1300px;
+  --header-font: "Poppins", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+#header_container { 
+  background: linear-gradient(to top, #03045E 0%, #0077B6 100%);
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+  padding-bottom: 20px;
+}
+
+#header {
+  z-index: 1001;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 1rem;
+}
+
+img {
+  display: flex;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
+}
+
+nav {
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  z-index: 9;
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav__links {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--text-dark);
+  transition: 0.5s;
+  z-index: -1;
+  transform: translateY(-100%);
+  font-size: larger;
+  font-weight: 700;
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.nav__links a:hover {
+  color: var(--secondary-color);
+}
+
+.nav__btns {
+  display: none;
+}
+
+.header__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.header__image img {
+  max-width: 500px;
+  margin-inline: auto;
+  
+}
+
+.header__content {
+  text-align: center;
+}
+
+.header__content h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 4.25rem;
+  font-weight: 600;
+  font-family: var(--header-font);
+  line-height: 5rem;
+  color: var(--text-dark);
+}
+
+
+
+.header__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header__btns img {
+  max-width: 150px;
+  border-radius: 5px;
+}
+
+@media (width > 768px) {
+  nav {
+    position: static;
+    padding-block: 2rem 0;
+    padding-inline: 1rem;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .nav__header {
+    flex: 1;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    position: static;
+    padding: 0;
+    flex-direction: row;
+    background-color: transparent;
+    transform: none;
+  }
+
+  .nav__links a {
+    padding-block: 5px;
+    color: var(--text-light);
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav__links a:hover {
+    border-color: var(--secondary-color);
+  }
+
+  .nav__btns {
+    display: flex;
+    flex: 1;
+  }
+
+  .nav__btns .btn {
+    padding: 0.75rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #03045E;
+    background-color: var(--tertiary-color);
+    border-radius: 5rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .nav__btns .btn:hover {
+    color: var(--white);
+    background-color: var(--secondary-color);
+  }
+
+  .header__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .header__image {
+    grid-area: 1/2/2/3;
+  }
+
+  .header__content {
+    text-align: left;
+  }
+
+  /* Tentang Kami */
+  #Tentang_Kami{
+    margin-bottom: 80px;
+  }
+
+  .About_Container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 10rem 1rem;
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Logo_image img {
+    max-width: 500px;
+    margin-inline: auto;
+  }
+  
+  .About_Content {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .About_Content p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    color: var(--text-light);
+    text-align: justify;
+  }
+  
+  @media (width > 768px) {
+    .About_Container {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+  
+    .Logo_image {
+      grid-area: 1/1/2/2;
+    }
+  
+    .About_Content {
+      text-align: left;
+    }
+  }
+
+  #logo2 {
+    -webkit-animation: spin 6s linear infinite;
+    -moz-animation: spin 6s linear infinite;
+    animation: spin 6s linear infinite;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+  }
+  
+  @-moz-keyframes spin {
+    0% {
+      -moz-transform: rotate(0deg);
+    }
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  /* Inventorie Card */
+  .Sarana_Container {
+    padding: 50px 0;
+    background-color: transparent;
+    margin-bottom: 15vh;
+  }
+  
+  .Sarana_Container h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    color: #fff;
+  }
+  
+  .sarana-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .card h2 {
+    margin: 20px 0;
+    font-size: 1.5rem;
+  }
+  
+  .card p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* Footer */ 
+  footer{
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to right, #00B4D8, #00B4D8);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .logo3{
+    width: 100px;
+    margin-bottom: 30px;
+  }
+  .col{
+    flex-basis: 25%;
+    padding: 10px;
+  }
+  .col:nth-child(2) .col:nth-child(3){
+    flex-basis: 15%;
+  }
+  .col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .email-id{
+    width: fit-content;
+    border-bottom: 1px solid #fff;
+    margin: 20px 0;
+  }
+  ul li{
+    list-style: none;
+    margin-bottom: 12px;
+  }
+  ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+  }
+  .social-icons .fa-brands {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    cursor: pointer;
+  }
+  hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 3px solid #03045E;
+    margin: 20px auto;
+    
+  }
+  .copy{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .underline{
+    width: 100%;
+    height: 5px;
+    background: #03045E;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+  }
+  .underline span{
+    width: 15px;
+    height: 100%;
+    background: #90E0EF;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+  }
+  @keyframes moving {
+    0%{
+      left: -20px;
+    }
+    100%{
+      left: 100px;
+    }
+  }
+  @media (max-width:700px) {
+    footer{
+      bottom: unset;
+    }
+    .col{
+      flex-basis: 100%;
+    }
+    .col:nth-child(2) .col:nth-child(3){
+      flex-basis: 100%;
+    }
+  }
+}
+
+#judul_sarana {
+  margin-top: 1vh;
+  padding-top: 20vh;
+}
