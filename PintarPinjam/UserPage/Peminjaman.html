@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminjaman</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/Peminjaman.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <div class="container">
+        <header>FORM PEMINJAMAN</header>
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">DATA DIRI</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nama Lengkap</label>
+                            <input type="text" placeholder="Masukkan Nama Lengkap" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>NIM</label>
+                            <input type="text" placeholder="Masukkan NIM" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" placeholder="Masukkan email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>No. Telepon/Whatsapp</label>
+                            <input type="number" placeholder="Masukkan No. Telepon" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Jenis Kelamin</label>
+                            <select required>
+                                <option disabled selected>Pilih Jenis Kelamin</option>
+                                <option>Laki-Laki</option>
+                                <option>Perempuan</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Organisasi/UKM</label>
+                            <input type="text" placeholder="Masukkan Organisasi" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details address">
+                    <span class="title">Alamat</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Tipe Alamat</label>
+                            <input type="text" placeholder="Permanent atau Temporary" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nama Jalan</label>
+                            <input type="text" placeholder="Masukkan Nama Jalan" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>No. Rumah/Bangunan</label>
+                            <input type="text" placeholder="Masukkan No. Rumah/Bangunan" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Kecamatan</label>
+                            <input type="text" placeholder="Masukkan Kecamatan" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Kelurahan</label>
+                            <input type="text" placeholder="Masukkan Kelurahan" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Kota, Provinsi</label>
+                            <input type="text" placeholder="Jakarta Selatan, DKI Jakarta" required>
+                        </div>
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+
+            <div class="form second">
+                <div class="details inventory">
+                    <span class="title">DATA BARANG PINJAMAN</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Kategori Barang Pinjaman</label>
+                            <select id="kategori_barang" required onchange="updateJenisBarang()">
+                                <option disabled selected>Pilih</option>
+                                <option value="audio_visual">Peralatan Audio & Visual</option>
+                                <option value="olahraga">Olahraga</option>
+                                <option value="kreativitas">Kesenian dan Kreativitas</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Jenis Barang</label>
+                            <select id="jenis_barang" required>
+                                <option disabled selected>Pilih</option>
+                                <!-- Opsi diisi melalui JavaScript -->
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Waktu Peminjaman</label>
+                            <input type="date" placeholder="Tanggal Peminjaman" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Waktu Pengembalina</label>
+                            <input type="date" placeholder="Tanggal Pengembalian" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Keperluan Peminjaman</label>
+                            <input type="text" placeholder="Keperluan" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Tempat Penggunaan</label>
+                            <input type="number" placeholder="Keterangan Tempat" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Upload Surat Peminjaman</label>
+                            <input type="file" id="surat_peminjaman" name="surat_peminjaman" accept=".doc,.docx" required>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="assets/js/Peminjaman.js"></script>
+</body>
+</html>
